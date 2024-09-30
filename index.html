@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binoculars - Detect AI-Generated Content</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Palatino+Linotype&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Load Prism.js and Okaidia theme for dark mode -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#hero">Binoculars</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact" class="cta">Contact Sales</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="hero-content">
+                <h1>Binoculars</h1>
+                <h3>Detect AI-Generated Content with Confidence</h3>
+                <p>In a world where user-generated content is crucial, ensuring authenticity is key. Our state-of-the-art API is designed to help businesses like yours accurately identify whether text is AI-generated or human-written. With the industry's best False Positive Rate, you can trust that we rarely mislabel human text as AI-generated, giving you unparalleled confidence in the authenticity of your data.</p>
+                <a href="#contact" class="cta-button">Contact Sales</a>
+            </div>
+            <div class="hero-image">
+                <img src="images/ai-detection.svg" alt="AI Detection Illustration">
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="how-it-works container">
+            <h2>How It Works</h2>
+            <p>Our API is designed to be simple and easy to use. With just a few lines of code, you can start detecting AI-generated content in your data. Here's how it works:</p>
+            <ol>
+                <li>Sign up for an API key</li>
+                <li>Integrate our API into your workflow</li>
+                <li>Submit text to our API</li>
+                <li>Receive a confidence score indicating whether the text is AI-generated</li>
+            </ol>
+        </section>
+
+        <section class="api-example container">
+            <h2>Python API Example</h2>
+            <pre class="code-block"><code class="language-python" id="code-snippet">
+        import requests
+
+        key = API_KEY
+        header = {'Authorization': f'Bearer {key}', 'Content-Type': 'application/json'}
+        
+        
+        text = """
+        Dr. Capy Cosmos, a capybara unlike any other, astounded the scientific community with his groundbreaking research in astrophysics. With his keen sense of observation and unparalleled ability to interpret cosmic data, he uncovered new insights into the mysteries of black holes and the origins of the universe. As he peered through telescopes with his large, round eyes, fellow researchers often remarked that it seemed as if the stars themselves whispered their secrets directly to him. Dr. Cosmos not only became a beacon of inspiration to aspiring scientists but also proved that intellect and innovation can be found in the most unexpected of creatures.
+        """
+        data = {'text': text}
+        url = 'https://binoculars.live/api/'
+        response = requests.post(url, headers=header, json=data)
+        print(f"\n\n_______________________\n\n")
+        print(f"Test Sample: {text}")
+        print(f"response.content = {response.content}")
+        print(f"response code = {response}")
+        print(response.json())
+        response_dict = eval(response.content)
+        print(f"response values = {response_dict['message']}")
+            </code></pre>
+            <button onclick="copyToClipboard('code-snippet')" class="copy-button">Copy</button>
+        </section>
+        
+
+        <!-- About Section -->
+        <section class="about container" id="about">
+            <h2>About Us</h2>
+            <div class="about-content">
+                <p>At Binoculars, our mission is to empower businesses with the tools they need to ensure content authenticity in an increasingly digital world. We specialize in advanced AI detection technologies that help you maintain trust and integrity in your user-generated content.</p>
+                <div class="about-features">
+                    <div class="feature">
+                        <!-- <img src="images/icons/innovation.svg" alt="Innovation"> -->
+                        <h3>Innovation</h3>
+                        <p>We embrace cutting-edge technologies to stay ahead in AI detection and deliver top-notch solutions to our clients.</p>
+                    </div>
+                    <div class="feature">
+                        <!-- <img src="images/icons/integrity.svg" alt="Integrity"> -->
+                        <h3>Integrity</h3>
+                        <p>Trust is at the core of everything we do. We ensure our tools are reliable and our business practices are transparent.</p>
+                    </div>
+                    <div class="feature">
+                        <!-- <img src="images/icons/customer-focus.svg" alt="Customer Focus"> -->
+                        <h3>Customer Focus</h3>
+                        <p>Our clients are our priority. We listen, adapt, and provide personalized support to meet your unique needs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Vanilla JS for Hamburger Menu and Smooth Scrolling -->
+    <script>
+        // Hamburger menu toggle for mobile
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+            hamburger.classList.toggle('active');
+        });
+
+        // Smooth Scrolling for in-page links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Copy to Clipboard Function
+        function copyToClipboard(elementId) {
+            const codeElement = document.getElementById(elementId);
+            const textToCopy = codeElement.textContent;
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                alert("Code copied to clipboard!");
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+            });
+        }
+    </script>
+</body>
+</html>
