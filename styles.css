@@ -192,6 +192,7 @@ nav {
 .cta-button:hover {
     background-color: var(--accent-color);
     transform: translateY(-3px);
+    color: white;
 }
 
 /* Sections */
