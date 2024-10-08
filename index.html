@@ -5,165 +5,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Binoculars - Detect AI-Generated Content</title>
     <link rel="stylesheet" href="styles.css">
-
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Palatino+Linotype&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-K968C9G3');</script>
-    <!-- End Google Tag Manager -->
-
-    <!-- Load Prism.js and Okaidia theme for dark mode -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K968C9G3"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <header>
-        <nav>
-            <div class="logo">
-                <img src="binoculars-icon.png" alt="AI Detection Illustration" style="height: 32pt; vertical-align: middle;">
-                <a href="#hero">Binoculars</a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="https://v0db3gvrj4a.typeform.com/to/vavLVVel" class="cta">Contact Sales</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
-    </header>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="hero" id="hero">
-            <div class="hero-content">
-                <h1>Binoculars</h1>
-                <h3>Detect AI-Generated Content with Confidence</h3>
-                <p>In a world where user-generated content is crucial, ensuring authenticity is key. Our state-of-the-art API is designed to help businesses like yours accurately identify whether text is AI-generated or human-written. With the industry's best False Positive Rate, you can trust that we rarely mislabel human text as AI-generated, giving you unparalleled confidence in the authenticity of your data.</p>
-                <a href="#contact" class="cta-button">Contact Sales</a>
+    <!-- Parallax Background -->
+    <div class="parallax-background">
+        <!-- Add scattered logos -->
+        <img src="images/logo.png" alt="Scattered Logo" class="scattered-logo logo1">
+        <img src="images/logo.png" alt="Scattered Logo" class="scattered-logo logo2">
+        <img src="images/logo.png" alt="Scattered Logo" class="scattered-logo logo3">
+        <img src="images/logo.png" alt="Scattered Logo" class="scattered-logo logo4">
+        <img src="images/logo.png" alt="Scattered Logo" class="scattered-logo logo5">
+        <img src="images/logo.png" alt="Scattered Logo" class="scattered-logo logo6">
+        <img src="images/logo.png" alt="Scattered Logo" class="scattered-logo logo7">
+        <img src="images/logo.png" alt="Scattered Logo" class="scattered-logo logo8">
+        <img src="images/logo.png" alt="Scattered Logo" class="scattered-logo logo9">
+        <img src="images/logo.png" alt="Scattered Logo" class="scattered-logo logo10">
+        <img src="images/logo.png" alt="Scattered Logo" class="scattered-logo logo11">
+        <img src="images/logo.png" alt="Scattered Logo" class="scattered-logo logo12">
+        <img src="images/logo.png" alt="Scattered Logo" class="scattered-logo logo13">
+        <img src="images/logo.png" alt="Scattered Logo" class="scattered-logo logo14">
+        <img src="images/logo.png" alt="Scattered Logo" class="scattered-logo logo15">
+    </div>
+
+    <!-- Landing Container -->
+    <div class="landing-container">
+        <div class="content">
+            <div class="logo-title">
+                <img src="images/logo.jpg" alt="Company Logo" class="logo">
+                <h1>BINOCULARS</h1>
             </div>
-            <div class="hero-image">
-                <img src="binoculars-icon.png" alt="AI Detection Illustration">
-            </div>
-        </section>
+            <!-- <img src="images/logo.jpg" alt="Company Logo" class="logo"> -->
+            <!-- <h1>BINOCULARS</h1> -->
+            <h2>Detect AI-generated text with confidence</h2>
+            <p>Ensure the authenticity of your content with our state-of-the-art AI detection API.</p>
+            <a href="#contact" class="cta-button">Contact Us</a>
+            <br>
+            <p2>Founded by faculty at the University of Maryland and Carnegie Mellon University</p2>
+            <br>
+            <img src="images/umd.webp" alt="UMD", height=30em>
+            <img src="images/cmu.png" alt="CMU", height=30em>
+        </div>
+    </div>
 
-        <!-- How It Works Section -->
-        <section class="how-it-works container">
-            <h2>How It Works</h2>
-            <p>Our API is designed to be simple and easy to use. With just a few lines of code, you can start detecting AI-generated content in your data. Here's how it works:</p>
-            <ol>
-                <li>Sign up for an API key</li>
-                <li>Integrate our API into your workflow</li>
-                <li>Submit text to our API</li>
-                <li>Receive a confidence score indicating whether the text is AI-generated</li>
-            </ol>
-        </section>
+    <!-- Contact Modal -->
+    <div id="contact-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Set Up a Meeting</h2>
+            <form action="https://formspree.io/f/xeoqjvgd" method="POST">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
 
-        <section class="api-example container">
-            <h2>Python API Example</h2>
-            <pre class="code-block"><code class="language-python" id="code-snippet">
-        import requests
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
 
-        key = API_KEY
-        header = {'Authorization': f'Bearer {key}', 'Content-Type': 'application/json'}
-        
-        
-        text = """
-        Dr. Capy Cosmos, a capybara unlike any other, astounded the scientific community with his groundbreaking research in astrophysics. With his keen sense of observation and unparalleled ability to interpret cosmic data, he uncovered new insights into the mysteries of black holes and the origins of the universe. As he peered through telescopes with his large, round eyes, fellow researchers often remarked that it seemed as if the stars themselves whispered their secrets directly to him. Dr. Cosmos not only became a beacon of inspiration to aspiring scientists but also proved that intellect and innovation can be found in the most unexpected of creatures.
-        """
-        data = {'text': text}
-        url = 'https://api.binoculars.live/api/'
-        response = requests.post(url, headers=header, json=data)
-        print(f"\n\n_______________________\n\n")
-        print(f"Test Sample: {text}")
-        print(f"response.content = {response.content}")
-        print(f"response code = {response}")
-        print(response.json())
-        response_dict = eval(response.content)
-        print(f"response values = {response_dict['message']}")
-            </code></pre>
-            <button onclick="copyToClipboard('code-snippet')" class="copy-button">Copy</button>
-        </section>
-        
-        <!-- Contact Section -->
-        <section class="contact container" id="contact">
-            <h2>Contact Sales</h2>
-            <div style="text-align: center;">
-                <p>Interested in learning more about how Binoculars can help your business? Contact our sales team to get started.</p>
-                <a href="https://v0db3gvrj4a.typeform.com/to/vavLVVel" class="cta-button">Contact Sales</a>
-            </div>
-        </section>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
 
-        <!-- About Section -->
-        <section class="about container" id="about">
-            <h2>About Us</h2>
-            <div class="about-content">
-                <p>At Binoculars, our mission is to empower businesses with the tools they need to ensure content authenticity in an increasingly digital world. We specialize in advanced AI detection technologies that help you maintain trust and integrity in your user-generated content.</p>
-                <div class="about-features">
-                    <div class="feature">
-                        <!-- <img src="images/icons/innovation.svg" alt="Innovation"> -->
-                        <h3>Innovation</h3>
-                        <p>We embrace cutting-edge technologies to stay ahead in AI detection and deliver top-notch solutions to our clients.</p>
-                    </div>
-                    <div class="feature">
-                        <!-- <img src="images/icons/integrity.svg" alt="Integrity"> -->
-                        <h3>Integrity</h3>
-                        <p>Trust is at the core of everything we do. We ensure our tools are reliable and our business practices are transparent.</p>
-                    </div>
-                    <div class="feature">
-                        <!-- <img src="images/icons/customer-focus.svg" alt="Customer Focus"> -->
-                        <h3>Customer Focus</h3>
-                        <p>Our clients are our priority. We listen, adapt, and provide personalized support to meet your unique needs.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+        </div>
+    </div>
 
-    <!-- Vanilla JS for Hamburger Menu and Smooth Scrolling -->
+    <!-- Optional JavaScript for Modal -->
     <script>
-        // Hamburger menu toggle for mobile
-        const hamburger = document.querySelector('.hamburger');
-        const navLinks = document.querySelector('.nav-links');
+        // Get modal elements
+        const modal = document.getElementById("contact-modal");
+        const btn = document.querySelector(".cta-button");
+        const closeBtn = document.querySelector(".close-button");
 
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('open');
-            hamburger.classList.toggle('active');
+        // Open modal when CTA button is clicked
+        btn.addEventListener("click", () => {
+            modal.style.display = "block";
         });
 
-        // Smooth Scrolling for in-page links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
+        // Close modal when close button is clicked
+        closeBtn.addEventListener("click", () => {
+            modal.style.display = "none";
         });
 
-        // Copy to Clipboard Function
-        function copyToClipboard(elementId) {
-            const codeElement = document.getElementById(elementId);
-            const textToCopy = codeElement.textContent;
-            navigator.clipboard.writeText(textToCopy).then(() => {
-                alert("Code copied to clipboard!");
-            }).catch(err => {
-                console.error('Failed to copy: ', err);
-            });
-        }
+        // Close modal when clicking outside the modal content
+        window.addEventListener("click", (event) => {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        });
     </script>
+
 </body>
 </html>
