@@ -13,7 +13,8 @@
     --text-color: #333;
     --link-color: #0c9f6f; /* New variable for link color */
     --font-primary: 'lora', 'serif';
-    --font-secondary: 'Roboto', sans-serif;
+    /* --font-secondary: 'Roboto', sans-serif; */
+    --font-secondary: 'Courier New', monospace;
     --transition-speed: 0.3s;
 }
 
@@ -194,6 +195,7 @@ body {
 
 .landing-container h1 {
     font-family: var(--font-primary);
+    font-weight: 20;
     /* font-size: 6vw; */
     /* margin-bottom: 20px; */
     color: #ffffff;
@@ -217,16 +219,9 @@ header {
     align-items: center;
 }
 
-.company-name {
-    font-family: var(--font-primary);
-    font-size: 20pt;
-    font-weight: 700;
-    color: #ffffff;
-    letter-spacing: 2px;
-}
-
 .landing-container h2 {
     font-family: var(--font-secondary);
+    font-weight: 50;
     font-size: clamp(12pt, 3vw, 16pt);
     margin-bottom: 2vh;
     color: #a6a6a6;
@@ -234,6 +229,8 @@ header {
 }
 
 .landing-container p {
+    font-family: var(--font-secondary);
+    font-weight: 20;
     font-size: 12pt;
     margin-bottom: 2vh;
     /* width: 30vw; */
@@ -244,8 +241,9 @@ header {
 }
 
 .landing-container p2 {
+    font-family: var(--font-primary);
+    font-weight: 10;
     font-size: 12pt;
-    /* margin-bottom: 1vh; */
     color: #a6a6a6;
 }
 
