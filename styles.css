@@ -20,7 +20,7 @@
 /* Set the font */
 body {
     font-family: var(--font-secondary);
-    background: linear-gradient(135deg, #011c30, #1171a2);
+    background: linear-gradient(135deg, #000000, #ffffff);
     color: #ffffff;
     height: 100vh;
     display: flex;
@@ -166,7 +166,8 @@ body {
     padding: 5vh 5vw;
     max-width: 90vw;
     background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 10px;
+    /* background: radial-gradient(#ffffff6d, #000000); */
+    border-radius: 0px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     width: 100%;
 }
@@ -177,20 +178,23 @@ body {
     align-items: center; /* Vertically center-align the logo with the text */
     justify-content: center; /* Center the logo-title block horizontally */
     gap: 1vw; /* Add some space between the logo and the company name */
-    /* padding: 10px 0; Add padding to fine-tune vertical alignment */
-    margin-bottom: 2vw;
+    padding: 10px 0; 
+    margin-bottom: 0vw;
+    font-size: clamp(18pt, 3.5vw, 28pt); /* Ensure the size is between 6vw and 36pt */
 }
 
 .logo {
-    height: 5vw; /* Keep aspect ratio */
+    /* height: clamp(1pt, 5vw, 280pt);*/
+    height: clamp(1pt, 11vw, 46pt);
     object-fit: contain; /* Ensures logo fits within the container */
     vertical-align: middle; /* Fine-tune vertical alignment */
-    margin-bottom: 1vw; 
+    margin-bottom: 0.4em; /* Remove default margin */
 }
+
 
 .landing-container h1 {
     font-family: var(--font-primary);
-    font-size: 6vw;
+    /* font-size: 6vw; */
     /* margin-bottom: 20px; */
     color: #ffffff;
     line-height: 1; /* Slightly increase line height to balance the text and logo */
@@ -215,7 +219,7 @@ header {
 
 .company-name {
     font-family: var(--font-primary);
-    font-size: 5vw;
+    font-size: 20pt;
     font-weight: 700;
     color: #ffffff;
     letter-spacing: 2px;
@@ -223,36 +227,40 @@ header {
 
 .landing-container h2 {
     font-family: var(--font-secondary);
-    font-size: 4vw;
-    margin-bottom: 2vw;
+    font-size: clamp(12pt, 3vw, 16pt);
+    margin-bottom: 2vh;
     color: #a6a6a6;
     font-style: italic;
 }
 
 .landing-container p {
-    font-size: 1.5vw;
-    margin-bottom: 2vw;
+    font-size: 12pt;
+    margin-bottom: 2vh;
+    /* width: 30vw; */
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    text-align: center;
     color: #dddddd;
 }
 
 .landing-container p2 {
-    font-size: 1.2vw;
-    margin-bottom: 1vw;
+    font-size: 12pt;
+    /* margin-bottom: 1vh; */
     color: #a6a6a6;
 }
 
 /* CTA Button */
 .cta-button {
-    padding: 2vw 4vw;
-    background-color: #ff7f50;
-    color: #ffffff;
+    padding: 10pt 20pt;
+    background-color: #ffffff;
+    color: #000000;
     text-decoration: none;
-    font-size: 1.5vw;
-    border-radius: 5px;
-    transition: background-color 0.3s, transform 0.3s;
+    font-size: 12pt;
+    border-radius: 0px;
+    /* transition: background-color 0.3s, transform 0.3s; */
     display: inline-block;
     margin-bottom: 30px;
-    animation: pulse 2s infinite;
+    /* animation: pulse 2s infinite; */
 }
 
 @keyframes pulse {
@@ -268,7 +276,7 @@ header {
 }
 
 .cta-button:hover {
-    background-color: #e67348;
+    background-color: #12c471;
     transform: translateY(-5px) scale(1.05);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
@@ -297,7 +305,7 @@ header {
     padding: 5vw;
     width: 90vw;
     max-width: 500px;
-    border-radius: 10px;
+    border-radius: 0px;
     position: relative;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     margin: auto;
@@ -318,7 +326,7 @@ header {
 .modal-content textarea {
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 0px;
     font-size: 1em;
     width: 100%;
 }
@@ -336,7 +344,7 @@ header {
     background-color: #00aaff;
     color: #ffffff;
     border: none;
-    border-radius: 5px;
+    border-radius: 0px;
     font-size: 1em;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
