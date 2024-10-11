@@ -186,7 +186,7 @@ body {
 
 .logo {
     /* height: clamp(1pt, 5vw, 280pt);*/
-    height: clamp(1pt, 11vw, 46pt);
+    height: clamp(1pt, 15vw, 80pt);
     object-fit: contain; /* Ensures logo fits within the container */
     vertical-align: middle; /* Fine-tune vertical alignment */
     margin-bottom: 0.4em; /* Remove default margin */
