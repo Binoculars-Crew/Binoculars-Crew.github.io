@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binoculars API Demo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Parallax Background -->
+    <div class="parallax-background">
+        <img src="images/logo.png" alt="Scattered Logo" class="scattered-logo logo1">
+        <img src="images/logo.png" alt="Scattered Logo" class="scattered-logo logo2">
+        <img src="images/logo.png" alt="Scattered Logo" class="scattered-logo logo3">
+        <img src="images/logo.png" alt="Scattered Logo" class="scattered-logo logo4">
+        <img src="images/logo.png" alt="Scattered Logo" class="scattered-logo logo5">
+        <img src="images/logo.png" alt="Scattered Logo" class="scattered-logo logo6">
+        <img src="images/logo.png" alt="Scattered Logo" class="scattered-logo logo7">
+        <img src="images/logo.png" alt="Scattered Logo" class="scattered-logo logo8">
+        <img src="images/logo.png" alt="Scattered Logo" class="scattered-logo logo9">
+        <img src="images/logo.png" alt="Scattered Logo" class="scattered-logo logo10">
+        <img src="images/logo.png" alt="Scattered Logo" class="scattered-logo logo11">
+        <img src="images/logo.png" alt="Scattered Logo" class="scattered-logo logo12">
+        <img src="images/logo.png" alt="Scattered Logo" class="scattered-logo logo13">
+        <img src="images/logo.png" alt="Scattered Logo" class="scattered-logo logo14">
+        <img src="images/logo.png" alt="Scattered Logo" class="scattered-logo logo15">
+    </div>
+
+    <!-- Landing Container -->
+    <div class="landing-container">
+        <div class="content">
+            <div class="logo-title">
+                <img src="images/new_logo.png" alt="Company Logo" class="logo">
+                <h1>API Demo</h1>
+            </div>
+
+            <!-- API Demo Form -->
+            <div class="api-form">
+                <div class="form-group">
+                    <label for="apiKey">API Key</label>
+                    <input type="password" id="apiKey" placeholder="Enter your API key">
+                </div>
+
+                <div class="form-group">
+                    <label for="requestBody">Request Body (JSON)</label>
+                    <textarea id="requestBody" placeholder="Enter JSON request body"></textarea>
+                </div>
+
+                <button id="submitBtn" onclick="sendRequest()">Send Request</button>
+                
+                <div id="error" class="error"></div>
+                <pre id="response"></pre>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        async function sendRequest() {
+            const apiKey = document.getElementById('apiKey').value;
+            const requestBody = document.getElementById('requestBody').value;
+            const submitBtn = document.getElementById('submitBtn');
+            const errorDiv = document.getElementById('error');
+            const responseDiv = document.getElementById('response');
+
+            // Validate inputs
+            if (!apiKey || !requestBody) {
+                errorDiv.textContent = 'Please fill in all fields';
+                return;
+            }
+
+            // Parse JSON
+            try {
+                JSON.parse(requestBody);
+            } catch (e) {
+                errorDiv.textContent = 'Invalid JSON in request body';
+                return;
+            }
+
+            // Update UI state
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+            errorDiv.textContent = '';
+            responseDiv.style.display = 'none';
+
+            try {
+                const response = await fetch('https://api1.binoculars.live', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${apiKey}`
+                    },
+                    body: requestBody
+                });
+
+                const data = await response.json();
+                responseDiv.textContent = JSON.stringify(data, null, 2);
+                responseDiv.style.display = 'block';
+            } catch (error) {
+                errorDiv.textContent = `Error: ${error.message}`;
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Send Request';
+            }
+        }
+    </script>
+</body>
+</html>
